@@ -1,1 +1,10 @@
 /* css styles */
+
+.sourceCode.r {
+    font-size: 12px;
+}
+
+li,
+p {
+    font-size: 20px;
+}
