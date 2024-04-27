@@ -14,4 +14,10 @@ language:
 - Visuzalização de dados com R
   - Pacote graphics
   - pacote ggplot2
-  - 
+  - pacote esquisse
+  - From data to viz
+
+## Aula 2
+
+- Revisitando do conteúdo da aula 1 - Ariel
+- 

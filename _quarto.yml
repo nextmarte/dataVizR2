@@ -9,15 +9,14 @@ website:
 
   navbar:
     right:
-
-      - icon: Home
-        href: index.qmd      
+      - text: Home
+        href: index.qmd
       - text: Apresentação
         href: apresentacao.qmd
       - text: Dashboard
         href: dashboard.qmd
       - icon: github
-        href: index.qmd
+        href: https://github.com/nextmarte/dataVizR2
         text: GitHub
 
 
