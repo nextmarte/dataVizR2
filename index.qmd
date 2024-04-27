@@ -15,7 +15,7 @@ language:
 <summary>**Preparando o ambiente **</summary>
 
 -   [CLIQUE AQUI PARA APRENDER A INSTALAR LOCALMENTE](https://uff-adm.notion.site/Instala-o-b5969aeda52045289c52db8fd833c6b3)
--   [CLIQUE AQUI PARA ACESSAR O AMBIENTE ONLINE](https://posit.cloud/content/8106315)  
+-   [CLIQUE AQUI PARA ACESSAR O AMBIENTE ONLINE](https://posit.cloud/content/8106491)  
     -   Instalação do QUARTO
     -   Instalação do R
     -   Instalação do Python
