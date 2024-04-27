@@ -9,23 +9,127 @@ format:
       incremental: true  
       transition: slide
       background-transition: fade
-      theme: dark
+      theme: night
 css: styles.css
 date: today
 footer: Universidade Federal Fluminense - Programa de formação de executivos - Ciência de dados
 
 incremental: true
 ---
-## Introdução ao QUARTO
 
-- O que é?
+## Quarto {#sec-quarto background-image="https://i.pinimg.com/originals/bb/7f/75/bb7f75f8abc5c505254d9d6830659b48.png" background-size="40%" background-opacity="30%" style="font-size: 35px"}
 
-- Como surgiu?
+::: {#tabset1 .panel-tabset}
+## O que é o Quarto?
 
-- O que dá pra fazer com ele?
+-   O Quarto é um sistema de publicação técnico-científica baseado em pandoc e markdown, proposto pela POSIT com o objetivo de unir texto e código para produzir diversos tipos de documentos como:
 
-- teste
+    ::: nonincremental
+    -   relatórios dinâmicos;
+    -   páginas web;
+    -   posts de blogs;
+    -   livros, artigos científicos, apresentações e muito mais.
+    :::
+
+## E tem mais...
+
+::: nonincremental
+-   Ele é um sistema que suporta diversas linguagens de programação como R, Python, Julia e ObservableJs.
+
+-   É versátil e por isso pode ser usado como uma das ferramentas de um sistema de PKM.
+:::
+:::
+
+## Primeiros passos no quarto com RStudio. {#sec-primeiros-passos-no-quarto-com-rstudio.}
+
+<!-- inicio da coluna  -->
+
+::: columns
+::: {.column width="50%" style="font-size: 30px"}
+Requisitos:
+
+Ter o R, RStudio instalados e Instalar o Quarto CLI para usar comandos para instalar templates de documento ou renderizar documentos usando linha de comando por exemplo.
+:::
+
+::: {.column width="50%"}
+![](https://i.pinimg.com/originals/f5/21/dd/f521dd722410fbfaeeee0243809a1832.png)
+:::
+:::
+
+<!-- fim de coluna -->
+
+<!-- inicio da parte prática da apresentação -->
+
+## Criando um documento quarto {#sec-criando-um-documento-quarto}
+
+::: columns
+::: {.column width="50%" style="font-size: 15px"}
+Clique em File \>\> New File \>\> Quarto document ![](https://i.pinimg.com/originals/7f/2b/fc/7f2bfc3c278d57aad177f127469fd634.png){width="80%"}
+:::
+
+::: {.column width="50%" style="font-size: 15px"}
+Escolha o tipo de documento e preencha os campos de título e autor ![](https://i.pinimg.com/originals/be/74/41/be7441a8dca36546bbb6ae6f222abd51.png){width="80%"}
+:::
+:::
+
+## Estrutura básica de um documento e interface {#sec-estrutura-básica-de-um-documento-e-interface}
+
+![](https://i.pinimg.com/originals/af/b0/8d/afb08d6f04c0b657050db89f3f6f1026.png)
+
+## Metadados {#sec-metadados}
+
+::: {#tabset3 .panel-tabset}
+## Estrutura
+
+::: {style="font-size: 25px"}
+-   Essa parte define:
+-   o tipo do documento
+-   o formato de saída
+-   as informações autorais, incluindo título, autor, afiliação, resumo, contato, etc...
+-   Elementos estruturais do documento como cores, fontes, tamanhos, etc...
+-   A maioria das definições de manuscrito podem ser sobreescritas no corpo do documento usando estilos css, HTML ou TEX por exemplo.
+:::
+
+## Exemplos
+
+::: columns
+::: {.column width="50%"}
+![](https://i.pinimg.com/originals/bd/53/71/bd5371acd8387b157be8f894764e6dec.png)
+:::
+
+::: {.column width="50%"}
+![](https://i.pinimg.com/originals/ae/aa/e7/aeaae7798d21ae437e1b320c331abee8.png)
+:::
+:::
+:::
+
+## Onde encontrar informação? {style="font-size: 25px"}
+
+::: {#tabset4 .panel-tabset}
+## Pergunte {style="font-size: 15px"}
+
+-   Procure os membros da comunidade
+-   Leia as referências e procure exemplos
+
+![](https://i.pinimg.com/originals/a4/c2/22/a4c22234bb37f1c6357eb85154edbded.png){width="50%"}
+
+## Quarto.org {style="font-size: 15px"}
+
+<iframe src="https://quarto.org/docs/reference/formats/ms.html#fonts" width="1800" height="500">
+
+</iframe>
+
+<!-- ![](https://i.pinimg.com/originals/38/13/bb/3813bb20e1e281bf626dc610b6803334.png)  -->
+:::
+
+
+# Obrigado!!
+
+marcusantonio\@id.uff.br![](https://cdn-icons-png.flaticon.com/512/6711/6711567.png){width="5%"}
+
+nextmarcus [![](https://cdn-icons-png.flaticon.com/512/124/124021.png){width="5%"}](https://twitter.com/nextmarcus)
+
+nextmarte [![](https://cdn3.iconfinder.com/data/icons/sociocons/256/github-sociocon.png){width="6%"}](https://github.com/nextmarte)
 
 
 <a href="/" class="btn btn-primary">Home</a>
-

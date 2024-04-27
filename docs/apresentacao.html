@@ -341,14 +341,117 @@ Marcus Ramalho &amp; Ariel Levy
 
   <p class="date">2024-04-27</p>
 </section>
-<section id="introdução-ao-quarto" class="slide level2">
-<h2>Introdução ao QUARTO</h2>
+<section id="sec-quarto" class="slide level2" data-background-image="https://i.pinimg.com/originals/bb/7f/75/bb7f75f8abc5c505254d9d6830659b48.png" data-background-size="40%" data-background-opacity="30%" style="font-size: 35px">
+<h2>Quarto</h2>
+<div id="tabset1" class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">O que é o Quarto?</a></li><li><a href="#tabset-1-2">E tem mais…</a></li></ul>
+<div id="tabset1" class="tab-content">
+<div id="tabset-1-1">
 <ul>
-<li class="fragment"><p>O que é?</p></li>
-<li class="fragment"><p>Como surgiu?</p></li>
-<li class="fragment"><p>O que dá pra fazer com ele?</p></li>
-<li class="fragment"><p>teste</p></li>
+<li class="fragment"><p>O Quarto é um sistema de publicação técnico-científica baseado em pandoc e markdown, proposto pela POSIT com o objetivo de unir texto e código para produzir diversos tipos de documentos como:</p>
+<div>
+<ul>
+<li>relatórios dinâmicos;</li>
+<li>páginas web;</li>
+<li>posts de blogs;</li>
+<li>livros, artigos científicos, apresentações e muito mais.</li>
 </ul>
+</div></li>
+</ul>
+</div>
+<div id="tabset-1-2">
+<div>
+<ul>
+<li><p>Ele é um sistema que suporta diversas linguagens de programação como R, Python, Julia e ObservableJs.</p></li>
+<li><p>É versátil e por isso pode ser usado como uma das ferramentas de um sistema de PKM.</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-primeiros-passos-no-quarto-com-rstudio." class="slide level2">
+<h2>Primeiros passos no quarto com RStudio.</h2>
+<!-- inicio da coluna  -->
+<div class="columns">
+<div class="column" style="font-size: 30px">
+<p>Requisitos:</p>
+<p>Ter o R, RStudio instalados e Instalar o Quarto CLI para usar comandos para instalar templates de documento ou renderizar documentos usando linha de comando por exemplo.</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="https://i.pinimg.com/originals/f5/21/dd/f521dd722410fbfaeeee0243809a1832.png"></p>
+</div>
+</div>
+<!-- fim de coluna -->
+<!-- inicio da parte prática da apresentação -->
+</section>
+<section id="sec-criando-um-documento-quarto" class="slide level2">
+<h2>Criando um documento quarto</h2>
+<div class="columns">
+<div class="column" style="font-size: 15px">
+<p>Clique em File &gt;&gt; New File &gt;&gt; Quarto document <img data-src="https://i.pinimg.com/originals/7f/2b/fc/7f2bfc3c278d57aad177f127469fd634.png" style="width:80.0%"></p>
+</div><div class="column" style="font-size: 15px">
+<p>Escolha o tipo de documento e preencha os campos de título e autor <img data-src="https://i.pinimg.com/originals/be/74/41/be7441a8dca36546bbb6ae6f222abd51.png" style="width:80.0%"></p>
+</div>
+</div>
+</section>
+<section id="sec-estrutura-básica-de-um-documento-e-interface" class="slide level2">
+<h2>Estrutura básica de um documento e interface</h2>
+
+<img data-src="https://i.pinimg.com/originals/af/b0/8d/afb08d6f04c0b657050db89f3f6f1026.png" class="r-stretch"></section>
+<section id="sec-metadados" class="slide level2">
+<h2>Metadados</h2>
+<div id="tabset3" class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Estrutura</a></li><li><a href="#tabset-2-2">Exemplos</a></li></ul>
+<div id="tabset3" class="tab-content">
+<div id="tabset-2-1">
+<div style="font-size: 25px">
+<ul>
+<li class="fragment">Essa parte define:</li>
+<li class="fragment">o tipo do documento</li>
+<li class="fragment">o formato de saída</li>
+<li class="fragment">as informações autorais, incluindo título, autor, afiliação, resumo, contato, etc…</li>
+<li class="fragment">Elementos estruturais do documento como cores, fontes, tamanhos, etc…</li>
+<li class="fragment">A maioria das definições de manuscrito podem ser sobreescritas no corpo do documento usando estilos css, HTML ou TEX por exemplo.</li>
+</ul>
+</div>
+</div>
+<div id="tabset-2-2">
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="https://i.pinimg.com/originals/bd/53/71/bd5371acd8387b157be8f894764e6dec.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="https://i.pinimg.com/originals/ae/aa/e7/aeaae7798d21ae437e1b320c331abee8.png"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="onde-encontrar-informação" class="slide level2" style="font-size: 25px">
+<h2>Onde encontrar informação?</h2>
+<div id="tabset4" class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Pergunte</a></li><li><a href="#tabset-3-2">Quarto.org</a></li></ul>
+<div id="tabset4" class="tab-content">
+<div id="tabset-3-1">
+<ul>
+<li class="fragment">Procure os membros da comunidade</li>
+<li class="fragment">Leia as referências e procure exemplos</li>
+</ul>
+<p><img data-src="https://i.pinimg.com/originals/a4/c2/22/a4c22234bb37f1c6357eb85154edbded.png" style="width:50.0%"></p>
+</div>
+<div id="tabset-3-2">
+<iframe src="https://quarto.org/docs/reference/formats/ms.html#fonts" width="1800" height="500">
+</iframe>
+<!-- ![](https://i.pinimg.com/originals/38/13/bb/3813bb20e1e281bf626dc610b6803334.png)  -->
+</div>
+</div>
+</div>
+</section>
+<section id="obrigado" class="title-slide slide level1 center">
+<h1>Obrigado!!</h1>
+<p>marcusantonio@id.uff.br<img data-src="https://cdn-icons-png.flaticon.com/512/6711/6711567.png" style="width:5.0%"></p>
+<p>nextmarcus <a href="https://twitter.com/nextmarcus"><img data-src="https://cdn-icons-png.flaticon.com/512/124/124021.png" style="width:5.0%"></a></p>
+<p>nextmarte <a href="https://github.com/nextmarte"><img data-src="https://cdn3.iconfinder.com/data/icons/sociocons/256/github-sociocon.png" style="width:6.0%"></a></p>
 <p><a href="./" class="btn btn-primary">Home</a></p>
 
 <div class="quarto-auto-generated-content">
