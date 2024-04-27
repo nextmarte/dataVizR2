@@ -25,3 +25,7 @@ incremental: true
 - O que dá pra fazer com ele?
 
 - teste
+
+
+<a href="/" class="btn btn-primary">Home</a>
+

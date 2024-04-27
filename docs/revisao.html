@@ -10,9 +10,9 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.549">
 
-  <meta name="author" content="Marcus Ramalho &amp; Ariel Levy">
+  <meta name="author" content="Ariel Levy">
   <meta name="dcterms.date" content="2024-04-27">
-  <title>DataVizR2 - Apresentação Visualização de dados</title>
+  <title>DataVizR2 - Visualização de dados</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,12 +30,78 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
-  <link rel="stylesheet" href="styles.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -328,32 +394,364 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Apresentação Visualização de dados</h1>
-  <p class="subtitle"><br> Aula 2 - QUARTO e Dashboards</p>
+  <h1 class="title">Visualização de dados</h1>
+  <p class="subtitle">o pacote ggplot2</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Marcus Ramalho &amp; Ariel Levy 
+Ariel Levy 
 </div>
 </div>
 </div>
 
   <p class="date">2024-04-27</p>
 </section>
-<section id="introdução-ao-quarto" class="slide level2">
-<h2>Introdução ao QUARTO</h2>
+<section id="sumário" class="slide level2">
+<h2>Sumário</h2>
 <ul>
-<li class="fragment"><p>O que é?</p></li>
-<li class="fragment"><p>Como surgiu?</p></li>
-<li class="fragment"><p>O que dá pra fazer com ele?</p></li>
-<li class="fragment"><p>teste</p></li>
+<li class="fragment">Introdução</li>
+<li class="fragment">Comunicar</li>
+<li class="fragment">Gráficos</li>
+<li class="fragment"><a href="https://quarto.org/">Quarto</a></li>
 </ul>
+</section>
+<section id="introdução" class="slide level2 smaller">
+<h2>Introdução</h2>
+<ul>
+<li class="fragment">O que é visualização de dados?</li>
+</ul>
+<div id="tabset1" class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1"></a></li><li><a href="#tabset-1-2"></a></li></ul>
+<div id="tabset1" class="tab-content">
+<div id="tabset-1-1">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 8
+  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
+  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
+1 Adelie  Torgersen           39.1          18.7               181        3750
+2 Adelie  Torgersen           39.5          17.4               186        3800
+3 Adelie  Torgersen           40.3          18                 195        3250
+4 Adelie  Torgersen           NA            NA                  NA          NA
+5 Adelie  Torgersen           36.7          19.3               193        3450
+6 Adelie  Torgersen           39.3          20.6               190        3650
+# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="revisao_files/figure-revealjs/plot-penguins0-1.png" alt="Scatterplot of bill length vs. flipper length for three species of penguins. The relationship is positive and moderately strong. The three species are identified on the plot with points with different colors and shapes, revealing three clusters." width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li class="fragment">Processo pelo qual as informações são transformadas em uma imagem.</li>
+</ul>
+</section>
+<section id="comunicar" class="slide level2">
+<h2>Comunicar</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li class="fragment"><p>Qual o público?</p></li>
+<li class="fragment"><p>Qual a mensagem?</p></li>
+<li class="fragment"><p>Quais as perguntas esperadas?</p></li>
+<li class="fragment"><p>Seguirá algum padrão?</p></li>
+<li class="fragment"><p>Estática ou interativa?</p></li>
+</ul>
+</div><div class="column" style="width:60%;">
+<p><img data-src="images/question-mark.png" alt="pessoa com interrogação - dúvida"></p>
+</div>
+</div>
+</section>
+<section id="gráficos" class="slide level2">
+<h2>Gráficos</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><a href="https://twitter.com/leeolney3/status/1510306989640925187/photo/1"><img data-src="images/species.jpg"></a></p>
+<p>Nem tudo é perfeito…</p>
+</div><div class="column" style="width:40%;">
+<p><img data-src="images/popgrowth-vs-popsize-colored-1.png"></p>
+</div>
+</div>
+</section>
+<section id="as-camadas" class="slide level2">
+<h2>As Camadas</h2>
+<p>De baixo para cima você irá construir seu gráfico.</p>
+
+<img data-src="images/layers.jpeg" alt="Descreve as camadas de um gráfico" class="r-stretch"><p><span class="citation" data-cites="ggplot2">[@ggplot2]</span></p>
+</section>
+<section id="ggplot2" class="slide level2">
+<h2>ggplot2</h2>
+<p>ggplot2 é um pacote para produção de gráficos.</p>
+<p><br></p>
+<p>O pacote se baseia na <a href="https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448?asin=0387245448&amp;revisionId=&amp;format=4&amp;depth=1">gramática dos gráficos</a> .</p>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span>
+<span id="cb2-2"><a></a></span>
+<span id="cb2-3"><a></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+<aside><div>
+<p>obs:</p>
+<div>
+<ul>
+<li><p>Instale apenas uma vez e utilize o comando library para ativar cada vez que utilizar.</p></li>
+<li><p>Se o pacote tidyverse estiver instalado o ggplot2 estará. O mesmo se dará com a ativação.</p></li>
+</ul>
+</div>
+</div></aside></section>
+<section id="criando-o-gráfico-com-ggplot2" class="slide level2 smaller">
+<h2>Criando o gráfico com ggplot2</h2>
+<ul>
+<li class="fragment"><p>Passe o banco de dados como parâmetro da função ggplot( ).</p></li>
+<li class="fragment"><p>Especifique a forma geométrica utilizando uma das funções geom_… : exemplo: geom_point( ).</p></li>
+<li class="fragment"><p>Indique os atributos do conjunto de dados a serem utilizados no gráfico no mapeamento.</p></li>
+<li class="fragment"><p>Conecte os diferentes objetos do ggplot com o operador +.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-2"><a></a></span>
+<span id="cb3-3"><a></a><span class="fu">ggplot</span>(_ _ _) <span class="sc">+</span></span>
+<span id="cb3-4"><a></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb3-5"><a></a>    <span class="at">mapping =</span> <span class="fu">aes</span>( <span class="at">x=</span> _ _ _, <span class="at">y=</span> _ _ _)</span>
+<span id="cb3-6"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+</ul>
+</section>
+<section id="a-estética" class="slide level2">
+<h2>A estética</h2>
+<ul>
+<li class="fragment"><div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://ggplot2.tidyverse.org/reference/aes.html"><img data-src="images/common-aesthetics-1.png" alt="tipos de estéticas: posição, formato, tipo e largura de linhas, cores etc."></a></p>
+<figcaption>A estética é controlada em mapping= aes( var1, var2, …)</figcaption>
+</figure>
+</div>
+</div></li>
+</ul>
+<p>Wilke (2019)</p>
+</section>
+<section id="um-mundo-de-formas-geométricas" class="slide level2">
+<h2>Um mundo de formas geométricas</h2>
+<p>ggplot2 utiliza funções que iniciam por geom_</p>
+<p>exemplo: geom point</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(displ, hwy, <span class="at">colour =</span> class)) <span class="sc">+</span> </span>
+<span id="cb4-2"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="revisao_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<section id="regras-básicas" class="slide level2">
+<h2>Regras básicas</h2>
+<ul>
+<li class="fragment"><p>informe a base.</p></li>
+<li class="fragment"><p>a variável ou variáveis que comporão o gráfico.</p></li>
+<li class="fragment"><p>a estética: cor, forma, tamanho</p></li>
+<li class="fragment"><p>a estética está atrelada as variáveis</p>
+<p>exemplos:</p>
+<ul>
+<li class="fragment"><p><code>aes(displ, hwy, colour = class)</code></p></li>
+<li class="fragment"><p><code>aes(displ, hwy, shape = drv)</code></p></li>
+<li class="fragment"><p><code>aes(displ, hwy, size = cyl)</code></p></li>
+</ul></li>
+</ul>
+</section>
+<section id="facetas" class="slide level2">
+<h2>Facetas</h2>
+<div id="tabset2" class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">código</a></li><li><a href="#tabset-2-2">gráfico</a></li></ul>
+<div id="tabset2" class="tab-content">
+<div id="tabset-2-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>exemplo<span class="ot">&lt;-</span><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(displ, hwy)) <span class="sc">+</span> </span>
+<span id="cb5-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb5-3"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>class)</span>
+<span id="cb5-4"><a></a>exemplo<span class="sc">+</span><span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-2-2">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="revisao_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="adicionnando-geoms" class="slide level2">
+<h2>Adicionnando geoms</h2>
+<div id="tabset3" class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">código</a></li><li><a href="#tabset-3-2">gráfico</a></li></ul>
+<div id="tabset3" class="tab-content">
+<div id="tabset-3-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(displ, hwy)) <span class="sc">+</span> </span>
+<span id="cb6-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb6-3"><a></a>  <span class="fu">geom_smooth</span>()</span>
+<span id="cb6-4"><a></a><span class="co"># `geom_smooth()` using method = 'loess' and formula 'y ~ x'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-3-2">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="revisao_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="métodos-são-importantes" class="slide level2">
+<h2>Métodos são importantes</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(displ, hwy)) <span class="sc">+</span> </span>
+<span id="cb7-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb7-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">span =</span> <span class="fl">0.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="revisao_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(displ, hwy)) <span class="sc">+</span> </span>
+<span id="cb8-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb8-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">span =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="revisao_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p><code>geom_smooth()</code> using method = ‘loess’ and formula ‘y ~ x’</p>
+</div></aside></section>
+<section id="métodos-são-importantes-1" class="slide level2">
+<h2>Métodos são importantes</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(displ, hwy)) <span class="sc">+</span> </span>
+<span id="cb9-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb9-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"gam"</span>, <span class="at">formula =</span> y <span class="sc">~</span> <span class="fu">s</span>(x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="revisao_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p>o método <em>gam</em> provido pelo pacote <strong>mgcv</strong> ajusta um modelo generalizado aditivo. fórmula: y ~ s(x) or y ~ s(x, bs = “cs”)</p>
+</div></aside></section>
+<section id="modelo-linear" class="slide level2">
+<h2>Modelo linear</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(displ, hwy)) <span class="sc">+</span> </span>
+<span id="cb10-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb10-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)<span class="sc">+</span></span>
+<span id="cb10-4"><a></a> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"rlm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="revisao_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="co">#&gt; `geom_smooth()` using formula 'y ~ x'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+<aside><div>
+<p>O método <em>lm</em> ajusta um modelo linear. Enquanto o <em>rlm</em> do pacote <strong>mass</strong> lida melhor com outliers no ajuste.</p>
+</div></aside></section>
+<section id="cores-são-vida" class="slide level2">
+<h2>Cores são vida</h2>
+<p>com cores <a href="http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf">padrão do R</a></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>g1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(displ, hwy, <span class="at">colour =</span> class)) <span class="sc">+</span> </span>
+<span id="cb12-2"><a></a>  <span class="fu">geom_point</span>()</span>
+<span id="cb12-3"><a></a></span>
+<span id="cb12-4"><a></a>paleta1<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"cadetblue"</span>, <span class="st">"darksalmon"</span>, <span class="st">"darkseagreen4"</span>, <span class="st">"gray62"</span>,<span class="st">"coral1"</span>, <span class="st">"darkgoldenrod3"</span>, <span class="st">"darkorchid3"</span>)</span>
+<span id="cb12-5"><a></a></span>
+<span id="cb12-6"><a></a>g1 <span class="sc">+</span> <span class="fu">scale_color_manual</span>(<span class="at">values =</span> paleta1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="revisao_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section>
+<section id="cores-no-preenchimento" class="slide level2">
+<h2>Cores no preenchimento</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>g2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(class, <span class="at">fill =</span> class)) <span class="sc">+</span> </span>
+<span id="cb13-2"><a></a>  <span class="fu">geom_bar</span>()</span>
+<span id="cb13-3"><a></a></span>
+<span id="cb13-4"><a></a>paleta1<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"cadetblue"</span>, <span class="st">"darksalmon"</span>, <span class="st">"darkseagreen4"</span>, <span class="st">"gray62"</span>,<span class="st">"coral1"</span>, <span class="st">"darkgoldenrod3"</span>, <span class="st">"darkorchid3"</span>)</span>
+<span id="cb13-5"><a></a></span>
+<span id="cb13-6"><a></a>(g2<span class="ot">&lt;-</span>g2 <span class="sc">+</span> <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> paleta1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="revisao_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
+<section id="incrementando-o-ggplot2" class="slide level2">
+<h2>Incrementando o ggplot2</h2>
+<p>Existem diversas extensões para o ggplot.</p>
+<p><a href="https://rpkgs.datanovia.com/ggpubr/">ggpubr - facilita a formatação</a></p>
+<p><a href="https://gganimate.com/">gganimate - estende a gramática de gráficos conforme implementado pelo ggplot2 para incluir a descrição da animação</a>.</p>
+<p><a href="https://exts.ggplot2.tidyverse.org/gallery/">E muitas mais, vale conferir</a></p>
+</section>
+<section id="com-ggplot2-são-infinitas-as-possibilidades" class="slide level2 ller">
+<h2>Com ggplot2 são infinitas as possibilidades</h2>
+<p>Cada caso é diferente.</p>
+<p>Qualquer gráfico poderá ser produzido.</p>
+<p>Conforme os tipos das variáveis:</p>
+<ul>
+<li class="fragment"><p>numérica</p></li>
+<li class="fragment"><p>categórica</p></li>
+<li class="fragment"><p>numérica e categórica</p></li>
+<li class="fragment"><p>mapas</p></li>
+<li class="fragment"><p>redes</p></li>
+<li class="fragment"><p>séries temporais</p></li>
+</ul>
+</section>
+<section id="vamos-explorar-juntos" class="slide level2">
+<h2>Vamos explorar juntos?</h2>
+<p><br></p>
+<p>Um excelente <a href="https://www.data-to-viz.com/">site com códigos e tipos de gráficos</a>.</p>
+<p><br></p>
 <p><a href="./" class="btn btn-primary">Home</a></p>
 
 <div class="quarto-auto-generated-content">
+<p><img src="images/uff-Tbg.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p>Universidade Federal Fluminense - Programa de formação de executivos - Ciência de dados</p>
+<p><a href="https://www.posadmuff.com.br/" class="uri">https://www.posadmuff.com.br/</a></p>
 </div>
 </div>
 </section>
@@ -367,6 +765,7 @@ Marcus Ramalho &amp; Ariel Levy
   <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -382,12 +781,13 @@ Marcus Ramalho &amp; Ariel Levy
       // https://revealjs.com/config/
       Reveal.initialize({
 'controlsAuto': true,
-'previewLinksAuto': false,
+'previewLinksAuto': true,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -408,10 +808,10 @@ Marcus Ramalho &amp; Ariel Levy
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
-        showSlideNumber: 'all',
+        showSlideNumber: 'print',
 
         // Add the current slide number to the URL hash so that reloading the
         // page/copying the URL will return you to the same slide
@@ -513,14 +913,14 @@ Marcus Ramalho &amp; Ariel Levy
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'slide',
+        transition: 'none',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
 
         // Transition style for full page slide backgrounds
         // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'fade',
+        backgroundTransition: 'none',
 
         // Number of slides away from the current that are visible
         viewDistance: 3,
@@ -558,7 +958,7 @@ Marcus Ramalho &amp; Ariel Levy
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,
@@ -567,6 +967,44 @@ Marcus Ramalho &amp; Ariel Levy
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

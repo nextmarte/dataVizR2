@@ -1,0 +1,397 @@
+---
+title: "Visualização de dados"
+subtitle: "o pacote ggplot2"
+author: "Ariel Levy"
+format: 
+  revealjs:
+    theme: night
+    chalkboard: true
+    incremental: true
+    slide-number: true
+    show-slide-number: print
+    preview-links: auto
+    logo: images/uff-Tbg.png
+    footer: <https://www.posadmuff.com.br/>
+date: today
+
+---
+
+## Sumário
+
+-   Introdução
+-   Comunicar
+-   Gráficos
+-   [Quarto](https://quarto.org/)
+
+```{r}
+#| label: setup
+#| message: false
+#| warning: false
+#| echo: false
+ 
+
+library(tidyverse)
+library(palmerpenguins)
+library(nlme)
+library(mgcv)
+library(esquisse)
+library(MASS)
+```
+
+## Introdução {.smaller}
+
+-   O que é visualização de dados?
+
+::: {#tabset1 .panel-tabset}
+## 
+
+```{r}
+#|echo: false
+head(penguins, 6)
+```
+
+## 
+
+```{r}
+#| echo: false
+#| label: plot-penguins0
+#| warning: false
+#| fig-height: 2.4
+#| fig-alt: "Scatterplot of bill length vs. flipper length for three species of penguins. The relationship is positive and moderately strong. The three species are identified on the plot with points with different colors and shapes, revealing three clusters."
+ggplot(
+  penguins,
+  aes(x = flipper_length_mm, y = bill_length_mm)
+) +
+  geom_point(aes(color = species, shape = species)) +
+  scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
+  labs(
+    title = "Flipper and bill length",
+    subtitle = "Dimensions for penguins at Palmer Station LTER",
+    x = "Flipper length (mm)", y = "Bill length (mm)",
+    color = "Penguin species", shape = "Penguin species"
+  ) +
+  theme_minimal()
+```
+:::
+
+-   Processo pelo qual as informações são transformadas em uma imagem.
+
+## Comunicar
+
+::: columns
+::: {.column width="40%"}
+-   Qual o público?
+
+-   Qual a mensagem?
+
+-   Quais as perguntas esperadas?
+
+-   Seguirá algum padrão?
+
+-   Estática ou interativa?
+:::
+
+::: {.column width="60%"}
+![](images/question-mark.png){fig-alt="pessoa com interrogação - dúvida"}
+:::
+:::
+
+## Gráficos
+
+::: columns
+::: {.column width="60%"}
+[![](images/species.jpg)](https://twitter.com/leeolney3/status/1510306989640925187/photo/1)
+
+Nem tudo é perfeito...
+:::
+
+::: {.column width="40%"}
+![](images/popgrowth-vs-popsize-colored-1.png)
+:::
+:::
+
+## As Camadas
+
+De baixo para cima você irá construir seu gráfico.
+
+![](images/layers.jpeg){fig-alt="Descreve as camadas de um gráfico"}
+
+[@ggplot2]
+
+## ggplot2
+
+ggplot2 é um pacote para produção de gráficos.
+
+<br>
+
+O pacote se baseia na [gramática dos gráficos](https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448?asin=0387245448&revisionId=&format=4&depth=1) .
+
+<br>
+
+```{r}
+#| echo: true
+#| eval: false
+#| warning: false
+
+install.packages("ggplot2")
+
+library(ggplot2)
+```
+
+::: aside
+obs:
+
+::: nonincremental
+-   Instale apenas uma vez e utilize o comando library para ativar cada vez que utilizar.
+
+-   Se o pacote tidyverse estiver instalado o ggplot2 estará. O mesmo se dará com a ativação.
+:::
+:::
+
+## Criando o gráfico com ggplot2 {.smaller}
+
+-   Passe o banco de dados como parâmetro da função ggplot( ).
+
+-   Especifique a forma geométrica utilizando uma das funções geom\_... : exemplo: geom_point( ).
+
+-   Indique os atributos do conjunto de dados a serem utilizados no gráfico no mapeamento.
+
+-   Conecte os diferentes objetos do ggplot com o operador +.
+
+    ```{r}
+    #| echo: true
+    #| eval: false
+
+    library(ggplot2)
+
+    ggplot(_ _ _) +
+      geom_point(
+        mapping = aes( x= _ _ _, y= _ _ _)
+      )
+
+    ```
+
+## A estética
+
+-   <div>
+
+    [![A estética é controlada em mapping= aes( var1, var2, ...)](images/common-aesthetics-1.png){fig-alt="tipos de estéticas: posição, formato, tipo e largura de linhas, cores etc."}](https://ggplot2.tidyverse.org/reference/aes.html)
+
+    </div>
+
+Wilke (2019)
+
+## Um mundo de formas geométricas
+
+ggplot2 utiliza funções que iniciam por geom\_
+
+exemplo: geom point
+
+```{r}
+#| echo: true
+ggplot(mpg, aes(displ, hwy, colour = class)) + 
+  geom_point()
+```
+
+## Regras básicas
+
+-   informe a base.
+
+-   a variável ou variáveis que comporão o gráfico.
+
+-   a estética: cor, forma, tamanho
+
+-   a estética está atrelada as variáveis
+
+    exemplos:
+
+    -   `aes(displ, hwy, colour = class)`
+
+    -   `aes(displ, hwy, shape = drv)`
+
+    -   `aes(displ, hwy, size = cyl)`
+
+## Facetas
+
+::: {#tabset2 .panel-tabset}
+## código
+
+```{r}
+#| echo: true
+#| eval: false
+exemplo<-ggplot(mpg, aes(displ, hwy)) + 
+  geom_point() + 
+  facet_wrap(~class)
+exemplo+theme_bw()
+```
+
+## gráfico
+
+```{r}
+#| echo: false
+#| eval: true
+ggplot(mpg, aes(displ, hwy)) + 
+  geom_point() + 
+  facet_wrap(~class)
+```
+:::
+
+## Adicionnando geoms
+
+::: {#tabset3 .panel-tabset}
+## código
+
+```{r}
+#| echo: true
+#| eval: false
+ggplot(mpg, aes(displ, hwy)) + 
+  geom_point() + 
+  geom_smooth()
+# `geom_smooth()` using method = 'loess' and formula 'y ~ x'
+```
+
+## gráfico
+
+```{r}
+#| echo: false
+#| eval: true
+ggplot(mpg, aes(displ, hwy)) + 
+  geom_point() + 
+  geom_smooth()
+# `geom_smooth()` using method = 'loess' and formula 'y ~ x'
+```
+:::
+
+## Métodos são importantes
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: true
+ggplot(mpg, aes(displ, hwy)) + 
+  geom_point() + 
+  geom_smooth(span = 0.2)
+
+
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: true
+ggplot(mpg, aes(displ, hwy)) + 
+  geom_point() + 
+  geom_smooth(span = 1)
+
+
+```
+:::
+:::
+
+::: aside
+`geom_smooth()` using method = 'loess' and formula 'y \~ x'
+:::
+
+## Métodos são importantes
+
+```{r}
+#| echo: true
+#| eval: true
+#| fig-height: 3.5
+
+ggplot(mpg, aes(displ, hwy)) + 
+  geom_point() + 
+  geom_smooth(method = "gam", formula = y ~ s(x))
+
+```
+
+::: aside
+o método *gam* provido pelo pacote **mgcv** ajusta um modelo generalizado aditivo. fórmula: y \~ s(x) or y \~ s(x, bs = "cs")
+:::
+
+## Modelo linear
+
+```{r}
+#| echo: true
+#| eval: true
+#| fig-height: 3.5
+ggplot(mpg, aes(displ, hwy)) + 
+  geom_point() + 
+  geom_smooth(method = "lm")+
+ geom_smooth(method = "rlm")
+#> `geom_smooth()` using formula 'y ~ x'
+```
+
+::: aside
+O método *lm* ajusta um modelo linear. Enquanto o *rlm* do pacote **mass** lida melhor com outliers no ajuste.
+:::
+
+## Cores são vida
+
+com cores [padrão do R](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf)
+
+```{r}
+#| echo: true
+g1 <- ggplot(mpg, aes(displ, hwy, colour = class)) + 
+  geom_point()
+
+paleta1<-c("cadetblue", "darksalmon", "darkseagreen4", "gray62","coral1", "darkgoldenrod3", "darkorchid3")
+
+g1 + scale_color_manual(values = paleta1)
+
+```
+
+## Cores no preenchimento
+
+```{r}
+#| echo: true
+g2 <- ggplot(mpg, aes(class, fill = class)) + 
+  geom_bar()
+
+paleta1<-c("cadetblue", "darksalmon", "darkseagreen4", "gray62","coral1", "darkgoldenrod3", "darkorchid3")
+
+(g2<-g2 + scale_fill_manual(values = paleta1))
+
+```
+
+## Incrementando o ggplot2
+
+Existem diversas extensões para o ggplot.
+
+[ggpubr - facilita a formatação](https://rpkgs.datanovia.com/ggpubr/)
+
+[gganimate - estende a gramática de gráficos conforme implementado pelo ggplot2 para incluir a descrição da animação](https://gganimate.com/).
+
+[E muitas mais, vale conferir](https://exts.ggplot2.tidyverse.org/gallery/)
+
+## Com ggplot2 são infinitas as possibilidades {.ller}
+
+Cada caso é diferente.
+
+Qualquer gráfico poderá ser produzido.
+
+Conforme os tipos das variáveis:
+
+-   numérica
+
+-   categórica
+
+-   numérica e categórica
+
+-   mapas
+
+-   redes
+
+-   séries temporais
+
+## Vamos explorar juntos?
+
+<br>
+
+Um excelente [site com códigos e tipos de gráficos](https://www.data-to-viz.com/).
+
+<br>
+
+<a href="/" class="btn btn-primary">Home</a>

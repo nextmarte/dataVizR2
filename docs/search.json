@@ -18,13 +18,153 @@
     "href": "index.html#aula-2---visualização-de-dados-com-quarto-r-e-python",
     "title": "Universidade Federal Fluminense  Programa de formação de executivos  Ciência de dados",
     "section": "Aula 2 - Visualização de dados com QUARTO, R e Python",
-    "text": "Aula 2 - Visualização de dados com QUARTO, R e Python\n\nRevisitando do conteúdo da aula 1 - Apresentação: Ariel\n\nggplot2\ngramática dos gráficos\nesquisse\nFrom data to viz\n\nConhecendo melhor o QUARTO - Apresentação: Marcus\n\nMetadados\nMeu melhor amigo\nCheatsheet\nTipos de documentos\n\nhtml\ndocx\npdf\npptx\nbeamer\nRevealJs\nDashboard\n\n\nCriando um dashboard com Python"
+    "text": "Aula 2 - Visualização de dados com QUARTO, R e Python\n\nPreparando o ambiente :\nCLIQUE AQUI PARA APRENDER A INSTALAR LOCALMENTE\nCLIQUE AQUI PARA ACESSAR O AMBIENTE ONLINE\n\nInstalação do QUARTO\nInstalação do R\nInstalação do Python\n\nRevisitando do conteúdo da aula 1 - Apresentação: Ariel\n\nggplot2\ngramática dos gráficos\nesquisse\nFrom data to viz\n\nConhecendo melhor o QUARTO - Apresentação: Marcus\n\nMetadados\nMeu melhor amigo\nCheatsheet\nTipos de documentos\nhtml\ndocx\npdf\npptx\nbeamer\nRevealJs\nDashboard\n\nCriando um dashboard com Python ou R - Apresentação: Marcus"
+  },
+  {
+    "objectID": "revisao.html#sumário",
+    "href": "revisao.html#sumário",
+    "title": "Visualização de dados",
+    "section": "Sumário",
+    "text": "Sumário\n\nIntrodução\nComunicar\nGráficos\nQuarto"
+  },
+  {
+    "objectID": "revisao.html#introdução",
+    "href": "revisao.html#introdução",
+    "title": "Visualização de dados",
+    "section": "Introdução",
+    "text": "Introdução\n\nO que é visualização de dados?\n\n\n\n\n\n\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProcesso pelo qual as informações são transformadas em uma imagem."
+  },
+  {
+    "objectID": "revisao.html#comunicar",
+    "href": "revisao.html#comunicar",
+    "title": "Visualização de dados",
+    "section": "Comunicar",
+    "text": "Comunicar\n\n\n\nQual o público?\nQual a mensagem?\nQuais as perguntas esperadas?\nSeguirá algum padrão?\nEstática ou interativa?"
+  },
+  {
+    "objectID": "revisao.html#gráficos",
+    "href": "revisao.html#gráficos",
+    "title": "Visualização de dados",
+    "section": "Gráficos",
+    "text": "Gráficos\n\n\n\nNem tudo é perfeito…"
+  },
+  {
+    "objectID": "revisao.html#as-camadas",
+    "href": "revisao.html#as-camadas",
+    "title": "Visualização de dados",
+    "section": "As Camadas",
+    "text": "As Camadas\nDe baixo para cima você irá construir seu gráfico.\n\n[@ggplot2]"
+  },
+  {
+    "objectID": "revisao.html#ggplot2",
+    "href": "revisao.html#ggplot2",
+    "title": "Visualização de dados",
+    "section": "ggplot2",
+    "text": "ggplot2\nggplot2 é um pacote para produção de gráficos.\n\nO pacote se baseia na gramática dos gráficos .\n\n\ninstall.packages(\"ggplot2\")\n\nlibrary(ggplot2)\n\n\n\nobs:\n\n\nInstale apenas uma vez e utilize o comando library para ativar cada vez que utilizar.\nSe o pacote tidyverse estiver instalado o ggplot2 estará. O mesmo se dará com a ativação."
+  },
+  {
+    "objectID": "revisao.html#criando-o-gráfico-com-ggplot2",
+    "href": "revisao.html#criando-o-gráfico-com-ggplot2",
+    "title": "Visualização de dados",
+    "section": "Criando o gráfico com ggplot2",
+    "text": "Criando o gráfico com ggplot2\n\nPasse o banco de dados como parâmetro da função ggplot( ).\nEspecifique a forma geométrica utilizando uma das funções geom_… : exemplo: geom_point( ).\nIndique os atributos do conjunto de dados a serem utilizados no gráfico no mapeamento.\nConecte os diferentes objetos do ggplot com o operador +.\n\nlibrary(ggplot2)\n\nggplot(_ _ _) +\n  geom_point(\n    mapping = aes( x= _ _ _, y= _ _ _)\n  )"
+  },
+  {
+    "objectID": "revisao.html#a-estética",
+    "href": "revisao.html#a-estética",
+    "title": "Visualização de dados",
+    "section": "A estética",
+    "text": "A estética\n\n\n\n\n\nA estética é controlada em mapping= aes( var1, var2, …)\n\n\n\n\nWilke (2019)"
+  },
+  {
+    "objectID": "revisao.html#um-mundo-de-formas-geométricas",
+    "href": "revisao.html#um-mundo-de-formas-geométricas",
+    "title": "Visualização de dados",
+    "section": "Um mundo de formas geométricas",
+    "text": "Um mundo de formas geométricas\nggplot2 utiliza funções que iniciam por geom_\nexemplo: geom point\n\nggplot(mpg, aes(displ, hwy, colour = class)) + \n  geom_point()"
+  },
+  {
+    "objectID": "revisao.html#regras-básicas",
+    "href": "revisao.html#regras-básicas",
+    "title": "Visualização de dados",
+    "section": "Regras básicas",
+    "text": "Regras básicas\n\ninforme a base.\na variável ou variáveis que comporão o gráfico.\na estética: cor, forma, tamanho\na estética está atrelada as variáveis\nexemplos:\n\naes(displ, hwy, colour = class)\naes(displ, hwy, shape = drv)\naes(displ, hwy, size = cyl)"
+  },
+  {
+    "objectID": "revisao.html#facetas",
+    "href": "revisao.html#facetas",
+    "title": "Visualização de dados",
+    "section": "Facetas",
+    "text": "Facetas\n\ncódigográfico\n\n\n\nexemplo&lt;-ggplot(mpg, aes(displ, hwy)) + \n  geom_point() + \n  facet_wrap(~class)\nexemplo+theme_bw()"
+  },
+  {
+    "objectID": "revisao.html#adicionnando-geoms",
+    "href": "revisao.html#adicionnando-geoms",
+    "title": "Visualização de dados",
+    "section": "Adicionnando geoms",
+    "text": "Adicionnando geoms\n\ncódigográfico\n\n\n\nggplot(mpg, aes(displ, hwy)) + \n  geom_point() + \n  geom_smooth()\n# `geom_smooth()` using method = 'loess' and formula 'y ~ x'"
+  },
+  {
+    "objectID": "revisao.html#métodos-são-importantes",
+    "href": "revisao.html#métodos-são-importantes",
+    "title": "Visualização de dados",
+    "section": "Métodos são importantes",
+    "text": "Métodos são importantes\n\n\n\n\nggplot(mpg, aes(displ, hwy)) + \n  geom_point() + \n  geom_smooth(span = 0.2)\n\n\n\n\n\n\n\n\n\n\nggplot(mpg, aes(displ, hwy)) + \n  geom_point() + \n  geom_smooth(span = 1)\n\n\n\n\n\n\n\n\n\n\n\n\ngeom_smooth() using method = ‘loess’ and formula ‘y ~ x’"
+  },
+  {
+    "objectID": "revisao.html#métodos-são-importantes-1",
+    "href": "revisao.html#métodos-são-importantes-1",
+    "title": "Visualização de dados",
+    "section": "Métodos são importantes",
+    "text": "Métodos são importantes\n\nggplot(mpg, aes(displ, hwy)) + \n  geom_point() + \n  geom_smooth(method = \"gam\", formula = y ~ s(x))\n\n\n\n\n\n\n\n\n\n\no método gam provido pelo pacote mgcv ajusta um modelo generalizado aditivo. fórmula: y ~ s(x) or y ~ s(x, bs = “cs”)"
+  },
+  {
+    "objectID": "revisao.html#modelo-linear",
+    "href": "revisao.html#modelo-linear",
+    "title": "Visualização de dados",
+    "section": "Modelo linear",
+    "text": "Modelo linear\n\nggplot(mpg, aes(displ, hwy)) + \n  geom_point() + \n  geom_smooth(method = \"lm\")+\n geom_smooth(method = \"rlm\")\n\n\n\n\n\n\n\n#&gt; `geom_smooth()` using formula 'y ~ x'\n\n\n\nO método lm ajusta um modelo linear. Enquanto o rlm do pacote mass lida melhor com outliers no ajuste."
+  },
+  {
+    "objectID": "revisao.html#cores-são-vida",
+    "href": "revisao.html#cores-são-vida",
+    "title": "Visualização de dados",
+    "section": "Cores são vida",
+    "text": "Cores são vida\ncom cores padrão do R\n\ng1 &lt;- ggplot(mpg, aes(displ, hwy, colour = class)) + \n  geom_point()\n\npaleta1&lt;-c(\"cadetblue\", \"darksalmon\", \"darkseagreen4\", \"gray62\",\"coral1\", \"darkgoldenrod3\", \"darkorchid3\")\n\ng1 + scale_color_manual(values = paleta1)"
+  },
+  {
+    "objectID": "revisao.html#cores-no-preenchimento",
+    "href": "revisao.html#cores-no-preenchimento",
+    "title": "Visualização de dados",
+    "section": "Cores no preenchimento",
+    "text": "Cores no preenchimento\n\ng2 &lt;- ggplot(mpg, aes(class, fill = class)) + \n  geom_bar()\n\npaleta1&lt;-c(\"cadetblue\", \"darksalmon\", \"darkseagreen4\", \"gray62\",\"coral1\", \"darkgoldenrod3\", \"darkorchid3\")\n\n(g2&lt;-g2 + scale_fill_manual(values = paleta1))"
+  },
+  {
+    "objectID": "revisao.html#incrementando-o-ggplot2",
+    "href": "revisao.html#incrementando-o-ggplot2",
+    "title": "Visualização de dados",
+    "section": "Incrementando o ggplot2",
+    "text": "Incrementando o ggplot2\nExistem diversas extensões para o ggplot.\nggpubr - facilita a formatação\ngganimate - estende a gramática de gráficos conforme implementado pelo ggplot2 para incluir a descrição da animação.\nE muitas mais, vale conferir"
+  },
+  {
+    "objectID": "revisao.html#com-ggplot2-são-infinitas-as-possibilidades",
+    "href": "revisao.html#com-ggplot2-são-infinitas-as-possibilidades",
+    "title": "Visualização de dados",
+    "section": "Com ggplot2 são infinitas as possibilidades",
+    "text": "Com ggplot2 são infinitas as possibilidades\nCada caso é diferente.\nQualquer gráfico poderá ser produzido.\nConforme os tipos das variáveis:\n\nnumérica\ncategórica\nnumérica e categórica\nmapas\nredes\nséries temporais"
+  },
+  {
+    "objectID": "revisao.html#vamos-explorar-juntos",
+    "href": "revisao.html#vamos-explorar-juntos",
+    "title": "Visualização de dados",
+    "section": "Vamos explorar juntos?",
+    "text": "Vamos explorar juntos?\n\nUm excelente site com códigos e tipos de gráficos.\n\nHome\n\n\n\n\nhttps://www.posadmuff.com.br/"
   },
   {
     "objectID": "apresentacao.html#introdução-ao-quarto",
     "href": "apresentacao.html#introdução-ao-quarto",
     "title": "Apresentação Visualização de dados",
     "section": "Introdução ao QUARTO",
-    "text": "Introdução ao QUARTO\n\nO que é?\nComo surgiu?\nO que dá pra fazer com ele?\nteste\n\n\n\n\nUniversidade Federal Fluminense - Programa de formação de executivos - Ciência de dados"
+    "text": "Introdução ao QUARTO\n\nO que é?\nComo surgiu?\nO que dá pra fazer com ele?\nteste\n\nHome\n\n\n\nUniversidade Federal Fluminense - Programa de formação de executivos - Ciência de dados"
   }
 ]

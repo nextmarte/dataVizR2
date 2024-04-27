@@ -10,6 +10,8 @@ website:
     right:
       - text: Home
         href: index.qmd
+      - text: Revisão
+        href: revisao.qmd
       - text: Apresentação
         href: apresentacao.qmd
       - text: Dashboard
