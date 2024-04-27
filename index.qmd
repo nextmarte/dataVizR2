@@ -56,6 +56,8 @@ language:
 -   Pelo menos duas páginas, pelo menos duas linhas e pelo menos duas colunas.
 -   Tem que ter um título e seu título tem que mostrar que você quer explicar com o dashboard.
 -   Pode ser feito em grupo para quem esteve em aula
--   Entrega: https://drive.google.com/drive/folders/18_c_UbWu8BlzBFB7sApoxECrSm96ETfO?usp=sharing
+-   Entrega: [](https://drive.google.com/drive/folders/)18_c_UbWu8BlzBFB7sApoxECrSm96ETfO?usp=sharing
+-   Template: [](https://posit.cloud/content/8107959) (completar o template com o dashboard)
+
 
 ## Link para a primeira aula: [AULA 1](https://marcusramalho.tech/dataVizR/#/title-slide)
