@@ -389,7 +389,7 @@ Conforme os tipos das variáveis:
 
 ## Vamos explorar juntos?
 
-![](https://www.data-to-viz.com/img/logo/tree-s.png){width="219"}
+![](https://www.data-to-viz.com/img/logo/tree-s.png){width="25%"}
 
 <br>
 

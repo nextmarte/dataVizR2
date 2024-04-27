@@ -140,11 +140,11 @@
     "text": "Facetas\n\ncódigográfico\n\n\n\nexemplo&lt;-ggplot(mpg, aes(displ, hwy)) + \n  geom_point() + \n  facet_wrap(~class)\nexemplo+theme_bw()"
   },
   {
-    "objectID": "revisao.html#adicionnando-geoms",
-    "href": "revisao.html#adicionnando-geoms",
+    "objectID": "revisao.html#adicionando-geoms",
+    "href": "revisao.html#adicionando-geoms",
     "title": "Visualização de dados",
-    "section": "Adicionnando geoms",
-    "text": "Adicionnando geoms\n\ncódigográfico\n\n\n\nggplot(mpg, aes(displ, hwy)) + \n  geom_point() + \n  geom_smooth()\n# `geom_smooth()` using method = 'loess' and formula 'y ~ x'"
+    "section": "Adicionando geoms",
+    "text": "Adicionando geoms\n\ncódigográfico\n\n\n\nggplot(mpg, aes(displ, hwy)) + \n  geom_point() + \n  geom_smooth()\n# `geom_smooth()` using method = 'loess' and formula 'y ~ x'"
   },
   {
     "objectID": "revisao.html#métodos-são-importantes",
