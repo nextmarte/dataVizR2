@@ -235,7 +235,7 @@ ggplot(mpg, aes(displ, hwy)) +
 ```
 :::
 
-## Adicionnando geoms
+## Adicionando geoms
 
 ::: {#tabset3 .panel-tabset}
 ## código
