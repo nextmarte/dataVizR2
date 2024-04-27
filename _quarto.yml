@@ -6,7 +6,6 @@ project:
 website:
   title: "DataVizR2"
 
-
   navbar:
     right:
       - text: Home

@@ -4,14 +4,21 @@
     "href": "index.html",
     "title": "Universidade Federal Fluminense  Programa de formação de executivos  Ciência de dados",
     "section": "",
-    "text": "Introdução ao curso\nO que é visualização de dados?\nVisuzalização de dados com R\n\nPacote graphics\npacote ggplot2"
+    "text": "Introdução ao curso\nO que é visualização de dados?\nVisuzalização de dados com R\n\nPacote graphics\npacote ggplot2\npacote esquisse\nFrom data to viz"
   },
   {
-    "objectID": "index.html#aula-1",
-    "href": "index.html#aula-1",
+    "objectID": "index.html#aula-1---visualização-de-dados-com-r",
+    "href": "index.html#aula-1---visualização-de-dados-com-r",
     "title": "Universidade Federal Fluminense  Programa de formação de executivos  Ciência de dados",
     "section": "",
-    "text": "Introdução ao curso\nO que é visualização de dados?\nVisuzalização de dados com R\n\nPacote graphics\npacote ggplot2"
+    "text": "Introdução ao curso\nO que é visualização de dados?\nVisuzalização de dados com R\n\nPacote graphics\npacote ggplot2\npacote esquisse\nFrom data to viz"
+  },
+  {
+    "objectID": "index.html#aula-2---visualização-de-dados-com-quarto-r-e-python",
+    "href": "index.html#aula-2---visualização-de-dados-com-quarto-r-e-python",
+    "title": "Universidade Federal Fluminense  Programa de formação de executivos  Ciência de dados",
+    "section": "Aula 2 - Visualização de dados com QUARTO, R e Python",
+    "text": "Aula 2 - Visualização de dados com QUARTO, R e Python\n\nRevisitando do conteúdo da aula 1 - Apresentação: Ariel\n\nggplot2\ngramática dos gráficos\nesquisse\nFrom data to viz\n\nConhecendo melhor o QUARTO - Apresentação: Marcus\n\nMetadados\nMeu melhor amigo\nCheatsheet\nTipos de documentos\n\nhtml\ndocx\npdf\npptx\nbeamer\nRevealJs\nDashboard\n\n\nCriando um dashboard com Python"
   },
   {
     "objectID": "apresentacao.html#introdução-ao-quarto",

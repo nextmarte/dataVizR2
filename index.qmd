@@ -7,7 +7,7 @@ language:
   title-block-author-single: "Professores: "
 ---
 
-## Aula 1
+## Aula 1 - Visualização de dados com R
 
 - Introdução ao curso
 - O que é visualização de dados?
@@ -17,7 +17,25 @@ language:
   - pacote esquisse
   - From data to viz
 
-## Aula 2
+## Aula 2 - Visualização de dados com QUARTO, R e Python
 
-- Revisitando do conteúdo da aula 1 - Ariel
-- 
+- Revisitando do conteúdo da aula 1 - Apresentação: Ariel
+  - ggplot2
+  - gramática dos gráficos
+  - esquisse
+  - From data to viz
+- Conhecendo melhor o QUARTO - Apresentação: Marcus
+  - Metadados
+  - Meu melhor amigo
+  - Cheatsheet
+  - Tipos de documentos
+    - html
+    - docx
+    - pdf
+    - pptx
+    - beamer
+    - RevealJs
+    - Dashboard
+- Criando um dashboard com Python   
+    
+  
