@@ -18,7 +18,7 @@
     "href": "index.html#aula-2---visualização-de-dados-com-quarto-r-e-python",
     "title": "Universidade Federal Fluminense  Programa de formação de executivos  Ciência de dados",
     "section": "Aula 2 - Visualização de dados com QUARTO, R e Python",
-    "text": "Aula 2 - Visualização de dados com QUARTO, R e Python\n\nPreparando o ambiente :\nCLIQUE AQUI PARA APRENDER A INSTALAR LOCALMENTE\nCLIQUE AQUI PARA ACESSAR O AMBIENTE ONLINE\n\nInstalação do QUARTO\nInstalação do R\nInstalação do Python\n\nRevisitando do conteúdo da aula 1 - Apresentação: Ariel\n\nggplot2\ngramática dos gráficos\nesquisse\nFrom data to viz\n\nConhecendo melhor o QUARTO - Apresentação: Marcus\n\nMetadados\nMeu melhor amigo\nCheatsheet\nTipos de documentos\nhtml\ndocx\npdf\npptx\nbeamer\nRevealJs\nDashboard\n\nCriando um dashboard com Python ou R - Apresentação: Marcus"
+    "text": "Aula 2 - Visualização de dados com QUARTO, R e Python\n\nPreparando o ambiente :\nCLIQUE AQUI PARA APRENDER A INSTALAR LOCALMENTE\nCLIQUE AQUI PARA ACESSAR O AMBIENTE ONLINE\n\nInstalação do QUARTO\nInstalação do R\nInstalação do Python\n\nRevisitando do conteúdo da aula 1 - Apresentação: Ariel\n\nggplot2\ngramática dos gráficos\nesquisse\nFrom data to viz\n\nConhecendo melhor o QUARTO - Apresentação: Marcus\n\nMetadados\nMeu melhor amigo (quarto.org)\nCheatsheet\nTipos de documentos\n\nhtml\ndocx\npdf\npptx\nbeamer\nRevealJs\nDashboard\n\n\nCriando um dashboard com Python ou R - Apresentação: Marcus"
   },
   {
     "objectID": "revisao.html#sumário",
@@ -163,42 +163,42 @@
   {
     "objectID": "apresentacao.html#sec-quarto",
     "href": "apresentacao.html#sec-quarto",
-    "title": "Apresentação Visualização de dados",
+    "title": "Conhecendo melhor o QUARTO",
     "section": "Quarto",
     "text": "Quarto\n\nO que é o Quarto?E tem mais…\n\n\n\nO Quarto é um sistema de publicação técnico-científica baseado em pandoc e markdown, proposto pela POSIT com o objetivo de unir texto e código para produzir diversos tipos de documentos como:\n\n\nrelatórios dinâmicos;\npáginas web;\nposts de blogs;\nlivros, artigos científicos, apresentações e muito mais.\n\n\n\n\n\n\n\nEle é um sistema que suporta diversas linguagens de programação como R, Python, Julia e ObservableJs.\nÉ versátil e por isso pode ser usado como uma das ferramentas de um sistema de PKM."
   },
   {
     "objectID": "apresentacao.html#sec-primeiros-passos-no-quarto-com-rstudio.",
     "href": "apresentacao.html#sec-primeiros-passos-no-quarto-com-rstudio.",
-    "title": "Apresentação Visualização de dados",
+    "title": "Conhecendo melhor o QUARTO",
     "section": "Primeiros passos no quarto com RStudio.",
     "text": "Primeiros passos no quarto com RStudio.\n\n\n\nRequisitos:\nTer o R, RStudio instalados e Instalar o Quarto CLI para usar comandos para instalar templates de documento ou renderizar documentos usando linha de comando por exemplo."
   },
   {
     "objectID": "apresentacao.html#sec-criando-um-documento-quarto",
     "href": "apresentacao.html#sec-criando-um-documento-quarto",
-    "title": "Apresentação Visualização de dados",
+    "title": "Conhecendo melhor o QUARTO",
     "section": "Criando um documento quarto",
     "text": "Criando um documento quarto\n\n\nClique em File &gt;&gt; New File &gt;&gt; Quarto document \n\nEscolha o tipo de documento e preencha os campos de título e autor"
   },
   {
     "objectID": "apresentacao.html#sec-estrutura-básica-de-um-documento-e-interface",
     "href": "apresentacao.html#sec-estrutura-básica-de-um-documento-e-interface",
-    "title": "Apresentação Visualização de dados",
+    "title": "Conhecendo melhor o QUARTO",
     "section": "Estrutura básica de um documento e interface",
     "text": "Estrutura básica de um documento e interface"
   },
   {
     "objectID": "apresentacao.html#sec-metadados",
     "href": "apresentacao.html#sec-metadados",
-    "title": "Apresentação Visualização de dados",
+    "title": "Conhecendo melhor o QUARTO",
     "section": "Metadados",
     "text": "Metadados\n\nEstruturaExemplos\n\n\n\n\nEssa parte define:\no tipo do documento\no formato de saída\nas informações autorais, incluindo título, autor, afiliação, resumo, contato, etc…\nElementos estruturais do documento como cores, fontes, tamanhos, etc…\nA maioria das definições de manuscrito podem ser sobreescritas no corpo do documento usando estilos css, HTML ou TEX por exemplo."
   },
   {
     "objectID": "apresentacao.html#onde-encontrar-informação",
     "href": "apresentacao.html#onde-encontrar-informação",
-    "title": "Apresentação Visualização de dados",
+    "title": "Conhecendo melhor o QUARTO",
     "section": "Onde encontrar informação?",
     "text": "Onde encontrar informação?\n\nPergunteQuarto.org\n\n\n\nProcure os membros da comunidade\nLeia as referências e procure exemplos"
   }

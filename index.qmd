@@ -36,16 +36,16 @@ language:
 -   Conhecendo melhor o QUARTO - Apresentação: Marcus 
 
     -   [ ] Metadados
-    -   [ ] Meu melhor amigo
+    -   [ ] Meu melhor amigo (quarto.org)
     -   [ ] Cheatsheet
     -   [ ] Tipos de documentos
-    -   [ ] html
-    -   [ ] docx
-    -   [ ] pdf
-    -   [ ] pptx
-    -   [ ] beamer
-    -   [ ] RevealJs
-    -   [ ] Dashboard
+        -   [ ] html
+        -   [ ] docx
+        -   [ ] pdf
+        -   [ ] pptx
+        -   [ ] beamer
+        -   [ ] RevealJs
+        -   [ ] Dashboard
 
 -   Criando um dashboard com Python ou R - Apresentação: Marcus
 

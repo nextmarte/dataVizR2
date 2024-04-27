@@ -1,6 +1,6 @@
 ---
-title: Apresentação Visualização de dados
-subtitle: <br> Aula 2 - QUARTO e Dashboards
+title: Conhecendo melhor o QUARTO
+
 author:
   - name: Marcus Ramalho & Ariel Levy
   
