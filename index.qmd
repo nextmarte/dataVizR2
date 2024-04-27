@@ -7,45 +7,50 @@ language:
   title-block-author-single: "Professores: "
 ---
 
-## Aula 1 - Visualização de dados com R
-
--   Introdução ao curso
--   O que é visualização de dados?
--   Visuzalização de dados com R
-    -   Pacote graphics
-    -   pacote ggplot2
-    -   pacote esquisse
-    -   From data to viz
+## Link para a primeira aula: [AULA 1](https://marcusramalho.tech/dataVizR/#/title-slide)
 
 ## Aula 2 - Visualização de dados com QUARTO, R e Python
 
--   Preparando o ambiente : 
+<details>
+
+<summary>**Preparando o ambiente **</summary>
+
 -   [CLIQUE AQUI PARA APRENDER A INSTALAR LOCALMENTE](https://uff-adm.notion.site/Instala-o-b5969aeda52045289c52db8fd833c6b3)
 -   [CLIQUE AQUI PARA ACESSAR O AMBIENTE ONLINE](https://posit.cloud/content/8106315)  
     -   Instalação do QUARTO
     -   Instalação do R
     -   Instalação do Python
 
--   Revisitando do conteúdo da aula 1 - Apresentação: Ariel
+</details>
 
-    -   ggplot2
-    -   gramática dos gráficos
-    -   esquisse
-    -   From data to viz
+<details>
 
--   Conhecendo melhor o QUARTO - Apresentação: Marcus 
+<summary>**Revisitando do conteúdo da aula 1 - Apresentação: Ariel**</summary>
 
-    -   [ ] Metadados
-    -   [ ] Meu melhor amigo (quarto.org)
-    -   [ ] Cheatsheet
-    -   [ ] Tipos de documentos
-        -   [ ] html
-        -   [ ] docx
-        -   [ ] pdf
-        -   [ ] pptx
-        -   [ ] beamer
-        -   [ ] RevealJs
-        -   [ ] Dashboard
+-   ggplot2
+-   gramática dos gráficos
+-   esquisse
+-   From data to viz
+
+</details>
+
+<details>
+
+<summary>**Conhecendo melhor o QUARTO - Apresentação: Marcus **</summary>
+
+-   [ ] [Metadados](https://quarto.org/docs/projects/quarto-projects.html)
+-   [ ] [Meu melhor amigo](https://quarto.org/)
+-   [ ] [Cheatsheets](https://rstudio.github.io/cheatsheets)
+-   [ ] [Tipos de documentos](https://quarto.org/docs/output-formats/all-formats.html)
+-   [ ] [Dashboard](https://quarto.org/docs/dashboards/)
+
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_VGJIPRGTy4?si=6gqc46Z16a7_tAC7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+</details>
 
 -   Criando um dashboard com Python ou R - Apresentação: Marcus
+  
+
+-   Tarefa: Criar um dashboard com Python ou R
 
