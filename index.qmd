@@ -52,5 +52,6 @@ language:
   
 
 -   Tarefa: Criar um dashboard com Python ou R
+-   [CAMPEONATO BRASILEIRO DE FUTEBOL](https://www.kaggle.com/datasets/adaoduque/campeonato-brasileiro-de-futebol/data)
 
 ## Link para a primeira aula: [AULA 1](https://marcusramalho.tech/dataVizR/#/title-slide)
