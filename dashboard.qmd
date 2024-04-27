@@ -20,14 +20,16 @@ library(ggplot2)
 
 ```{python}
 # Importa a biblioteca plotly.express com o alias px
-import plotly.express as px
 
+# pip install plotly.express
+
+import plotly.express as px
 
 # Carrega o conjunto de dados gapminder do plotly.express e armazena na variável df
 df = px.data.gapminder()
 ```
 
-## Row {height=60%}
+# page 1
 
 ```{python}
 #| title: PIB e Expectativa de Vida com python
@@ -52,7 +54,8 @@ px.scatter(
 #| title: PIB e Expectativa de Vida com R
 # Cria o gráfico de dispersão com ggplot2
 
-p <- ggplot(gapminder, aes(x = gdpPercap, y = lifeExp, color = continent, size = pop)) +
+p <- ggplot(gapminder, aes(x = gdpPercap, y = lifeExp,
+            color = continent, size = pop)) +
   geom_point() +
   scale_x_log10() +
   labs(
@@ -70,7 +73,7 @@ animate(p, renderer = gifski_renderer())
 ```
 
 
-## Row {height=40%}
+# page 2
 
 ```{python}
 #| title: População

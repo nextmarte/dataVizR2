@@ -53,5 +53,9 @@ language:
 
 -   Tarefa: Criar um dashboard com Python ou R
 -   [CAMPEONATO BRASILEIRO DE FUTEBOL](https://www.kaggle.com/datasets/adaoduque/campeonato-brasileiro-de-futebol/data)
+-   Pelo menos duas páginas, pelo menos duas linhas e pelo menos duas colunas.
+-   Tem que ter um título e seu título tem que mostrar que você quer explicar com o dashboard.
+-   Pode ser feito em grupo para quem esteve em aula
+-   Entrega: https://drive.google.com/drive/folders/18_c_UbWu8BlzBFB7sApoxECrSm96ETfO?usp=sharing
 
 ## Link para a primeira aula: [AULA 1](https://marcusramalho.tech/dataVizR/#/title-slide)
