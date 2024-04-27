@@ -13,7 +13,6 @@ format:
     logo: images/uff-Tbg.png
     footer: <https://www.posadmuff.com.br/>
 date: today
-
 ---
 
 ## Sumário
@@ -372,6 +371,7 @@ Cada caso é diferente.
 
 Qualquer gráfico poderá ser produzido.
 
+::: {layout-ncol="2"}
 Conforme os tipos das variáveis:
 
 -   numérica
@@ -385,8 +385,11 @@ Conforme os tipos das variáveis:
 -   redes
 
 -   séries temporais
+:::
 
 ## Vamos explorar juntos?
+
+![](https://www.data-to-viz.com/img/logo/tree-s.png)
 
 <br>
 

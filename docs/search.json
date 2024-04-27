@@ -21,6 +21,48 @@
     "text": "Link para a primeira aula: AULA 1"
   },
   {
+    "objectID": "apresentacao.html#sec-quarto",
+    "href": "apresentacao.html#sec-quarto",
+    "title": "Conhecendo melhor o QUARTO",
+    "section": "Quarto",
+    "text": "Quarto\n\nO que é o Quarto?E tem mais…\n\n\n\nO Quarto é um sistema de publicação técnico-científica baseado em pandoc e markdown, proposto pela POSIT com o objetivo de unir texto e código para produzir diversos tipos de documentos como:\n\n\nrelatórios dinâmicos;\npáginas web;\nposts de blogs;\nlivros, artigos científicos, apresentações e muito mais.\n\n\n\n\n\n\n\nEle é um sistema que suporta diversas linguagens de programação como R, Python, Julia e ObservableJs.\nÉ versátil e por isso pode ser usado como uma das ferramentas de um sistema de PKM."
+  },
+  {
+    "objectID": "apresentacao.html#sec-primeiros-passos-no-quarto-com-rstudio.",
+    "href": "apresentacao.html#sec-primeiros-passos-no-quarto-com-rstudio.",
+    "title": "Conhecendo melhor o QUARTO",
+    "section": "Primeiros passos no quarto com RStudio.",
+    "text": "Primeiros passos no quarto com RStudio.\n\n\n\nRequisitos:\nTer o R, RStudio instalados e Instalar o Quarto CLI para usar comandos para instalar templates de documento ou renderizar documentos usando linha de comando por exemplo."
+  },
+  {
+    "objectID": "apresentacao.html#sec-criando-um-documento-quarto",
+    "href": "apresentacao.html#sec-criando-um-documento-quarto",
+    "title": "Conhecendo melhor o QUARTO",
+    "section": "Criando um documento quarto",
+    "text": "Criando um documento quarto\n\n\nClique em File &gt;&gt; New File &gt;&gt; Quarto document \n\nEscolha o tipo de documento e preencha os campos de título e autor"
+  },
+  {
+    "objectID": "apresentacao.html#sec-estrutura-básica-de-um-documento-e-interface",
+    "href": "apresentacao.html#sec-estrutura-básica-de-um-documento-e-interface",
+    "title": "Conhecendo melhor o QUARTO",
+    "section": "Estrutura básica de um documento e interface",
+    "text": "Estrutura básica de um documento e interface"
+  },
+  {
+    "objectID": "apresentacao.html#sec-metadados",
+    "href": "apresentacao.html#sec-metadados",
+    "title": "Conhecendo melhor o QUARTO",
+    "section": "Metadados",
+    "text": "Metadados\n\nEstruturaExemplos\n\n\n\n\nEssa parte define:\no tipo do documento\no formato de saída\nas informações autorais, incluindo título, autor, afiliação, resumo, contato, etc…\nElementos estruturais do documento como cores, fontes, tamanhos, etc…\nA maioria das definições de manuscrito podem ser sobreescritas no corpo do documento usando estilos css, HTML ou TEX por exemplo."
+  },
+  {
+    "objectID": "apresentacao.html#onde-encontrar-informação",
+    "href": "apresentacao.html#onde-encontrar-informação",
+    "title": "Conhecendo melhor o QUARTO",
+    "section": "Onde encontrar informação?",
+    "text": "Onde encontrar informação?\n\nPergunteQuarto.org\n\n\n\nProcure os membros da comunidade\nLeia as referências e procure exemplos"
+  },
+  {
     "objectID": "revisao.html#sumário",
     "href": "revisao.html#sumário",
     "title": "Visualização de dados",
@@ -151,55 +193,20 @@
     "href": "revisao.html#com-ggplot2-são-infinitas-as-possibilidades",
     "title": "Visualização de dados",
     "section": "Com ggplot2 são infinitas as possibilidades",
-    "text": "Com ggplot2 são infinitas as possibilidades\nCada caso é diferente.\nQualquer gráfico poderá ser produzido.\nConforme os tipos das variáveis:\n\nnumérica\ncategórica\nnumérica e categórica\nmapas\nredes\nséries temporais"
+    "text": "Com ggplot2 são infinitas as possibilidades\nCada caso é diferente.\nQualquer gráfico poderá ser produzido.\n\n\n\nConforme os tipos das variáveis:\n\n\n\nnumérica\ncategórica\nnumérica e categórica\nmapas\nredes\nséries temporais"
   },
   {
     "objectID": "revisao.html#vamos-explorar-juntos",
     "href": "revisao.html#vamos-explorar-juntos",
     "title": "Visualização de dados",
     "section": "Vamos explorar juntos?",
-    "text": "Vamos explorar juntos?\n\nUm excelente site com códigos e tipos de gráficos.\n\nHome\n\n\n\n\nhttps://www.posadmuff.com.br/"
+    "text": "Vamos explorar juntos?\n\n\nUm excelente site com códigos e tipos de gráficos.\n\nHome\n\n\n\n\nhttps://www.posadmuff.com.br/"
   },
   {
-    "objectID": "apresentacao.html#sec-quarto",
-    "href": "apresentacao.html#sec-quarto",
-    "title": "Conhecendo melhor o QUARTO",
-    "section": "Quarto",
-    "text": "Quarto\n\nO que é o Quarto?E tem mais…\n\n\n\nO Quarto é um sistema de publicação técnico-científica baseado em pandoc e markdown, proposto pela POSIT com o objetivo de unir texto e código para produzir diversos tipos de documentos como:\n\n\nrelatórios dinâmicos;\npáginas web;\nposts de blogs;\nlivros, artigos científicos, apresentações e muito mais.\n\n\n\n\n\n\n\nEle é um sistema que suporta diversas linguagens de programação como R, Python, Julia e ObservableJs.\nÉ versátil e por isso pode ser usado como uma das ferramentas de um sistema de PKM."
-  },
-  {
-    "objectID": "apresentacao.html#sec-primeiros-passos-no-quarto-com-rstudio.",
-    "href": "apresentacao.html#sec-primeiros-passos-no-quarto-com-rstudio.",
-    "title": "Conhecendo melhor o QUARTO",
-    "section": "Primeiros passos no quarto com RStudio.",
-    "text": "Primeiros passos no quarto com RStudio.\n\n\n\nRequisitos:\nTer o R, RStudio instalados e Instalar o Quarto CLI para usar comandos para instalar templates de documento ou renderizar documentos usando linha de comando por exemplo."
-  },
-  {
-    "objectID": "apresentacao.html#sec-criando-um-documento-quarto",
-    "href": "apresentacao.html#sec-criando-um-documento-quarto",
-    "title": "Conhecendo melhor o QUARTO",
-    "section": "Criando um documento quarto",
-    "text": "Criando um documento quarto\n\n\nClique em File &gt;&gt; New File &gt;&gt; Quarto document \n\nEscolha o tipo de documento e preencha os campos de título e autor"
-  },
-  {
-    "objectID": "apresentacao.html#sec-estrutura-básica-de-um-documento-e-interface",
-    "href": "apresentacao.html#sec-estrutura-básica-de-um-documento-e-interface",
-    "title": "Conhecendo melhor o QUARTO",
-    "section": "Estrutura básica de um documento e interface",
-    "text": "Estrutura básica de um documento e interface"
-  },
-  {
-    "objectID": "apresentacao.html#sec-metadados",
-    "href": "apresentacao.html#sec-metadados",
-    "title": "Conhecendo melhor o QUARTO",
-    "section": "Metadados",
-    "text": "Metadados\n\nEstruturaExemplos\n\n\n\n\nEssa parte define:\no tipo do documento\no formato de saída\nas informações autorais, incluindo título, autor, afiliação, resumo, contato, etc…\nElementos estruturais do documento como cores, fontes, tamanhos, etc…\nA maioria das definições de manuscrito podem ser sobreescritas no corpo do documento usando estilos css, HTML ou TEX por exemplo."
-  },
-  {
-    "objectID": "apresentacao.html#onde-encontrar-informação",
-    "href": "apresentacao.html#onde-encontrar-informação",
-    "title": "Conhecendo melhor o QUARTO",
-    "section": "Onde encontrar informação?",
-    "text": "Onde encontrar informação?\n\nPergunteQuarto.org\n\n\n\nProcure os membros da comunidade\nLeia as referências e procure exemplos"
+    "objectID": "readme.html",
+    "href": "readme.html",
+    "title": "DataVizR",
+    "section": "",
+    "text": "Segunda aula do curso de visualização de dados do Programa de formação de executivos em Ciência de dados da Universidade Federal Fluminense\nProfessores: Marcus Ramalho e Ariel Levy"
   }
 ]
