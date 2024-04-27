@@ -7,7 +7,6 @@ language:
   title-block-author-single: "Professores: "
 ---
 
-## Link para a primeira aula: [AULA 1](https://marcusramalho.tech/dataVizR/#/title-slide)
 
 ## Aula 2 - Visualização de dados com QUARTO, R e Python
 
@@ -54,3 +53,4 @@ language:
 
 -   Tarefa: Criar um dashboard com Python ou R
 
+## Link para a primeira aula: [AULA 1](https://marcusramalho.tech/dataVizR/#/title-slide)

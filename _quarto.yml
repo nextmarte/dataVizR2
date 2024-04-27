@@ -5,6 +5,7 @@ project:
 
 website:
   title: "DataVizR2"
+  # margin-footer: "Universidade Federal Fluminense Programa de formação de executivos Ciência de dados - 2024"
 
   navbar:
     right:
@@ -23,7 +24,9 @@ website:
 
 format:
   html:
-    theme: cyborg
+    theme:
+      light: flatly
+      dark: darkly
 
 title: "DataVizR"
 
