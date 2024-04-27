@@ -1,3 +1,17 @@
-## Introdução ao QUARTO
+---
+title: Universidade Federal Fluminense <br> Programa de formação de executivos <br> Ciência de dados
+lang: pt-br
+subtitle: "Disciplina: Visualização de dados"
+author: "Marcus Ramalho e Ariel Levy"
+language: 
+  title-block-author-single: "Professores: "
+---
 
-QUARTO é um sistema de editoração de textos que permite a escrita de documentos científicos de alta qualidade. O QUARTO é baseado no LaTeX, um sistema de editoração de textos amplamente utilizado em todo o mundo. O QUARTO é uma ferramenta de código aberto e pode ser utilizada gratuitamente por qualquer pessoa.
+## Aula 1
+
+- Introdução ao curso
+- O que é visualização de dados?
+- Visuzalização de dados com R
+  - Pacote graphics
+  - pacote ggplot2
+  - 

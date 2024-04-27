@@ -1,16 +1,23 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "DataVizR",
+    "title": "Universidade Federal Fluminense  Programa de formação de executivos  Ciência de dados",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Introdução ao curso\nO que é visualização de dados?\nVisuzalização de dados com R\n\nPacote graphics\npacote ggplot2"
+  },
+  {
+    "objectID": "index.html#aula-1",
+    "href": "index.html#aula-1",
+    "title": "Universidade Federal Fluminense  Programa de formação de executivos  Ciência de dados",
+    "section": "",
+    "text": "Introdução ao curso\nO que é visualização de dados?\nVisuzalização de dados com R\n\nPacote graphics\npacote ggplot2"
+  },
+  {
+    "objectID": "apresentacao.html#introdução-ao-quarto",
+    "href": "apresentacao.html#introdução-ao-quarto",
+    "title": "Apresentação Visualização de dados",
+    "section": "Introdução ao QUARTO",
+    "text": "Introdução ao QUARTO\n\nO que é?\nComo surgiu?\nO que dá pra fazer com ele?\nteste\n\n\n\n\nUniversidade Federal Fluminense - Programa de formação de executivos - Ciência de dados"
   }
 ]

@@ -2,18 +2,28 @@ project:
   type: website
   output-dir: docs
 
+
 website:
-  title: "DataVizR"
+  title: "DataVizR2"
+
+
   navbar:
-    left:
-      - href: index.qmd
-        text: Home
+    right:
+
+      - icon: Home
+        href: index.qmd      
+      - text: Apresentação
+        href: apresentacao.qmd
+      - text: Dashboard
+        href: dashboard.qmd
+      - icon: github
+        href: index.qmd
+        text: GitHub
+
 
 format:
-  revealjs: 
-    theme: dark
+  html:
+    theme: cyborg
 
-
-
-
+title: "DataVizR"
 
