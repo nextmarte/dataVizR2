@@ -1,0 +1,109 @@
+--- 
+title: "Dashboard - Indicadores de Desenvolvimento por Continente"
+format: dashboard
+--- 
+
+```{r}
+# Lista de pacotes a serem instalados
+packages <- c("plotly", "reticulate","gganimate","gapminder")
+
+# Instala os pacotes que ainda não estão instalados
+install.packages(setdiff(packages, rownames(installed.packages())))
+
+# Carrega as bibliotecas
+library(plotly)
+library(reticulate)
+library(gganimate)
+library(gapminder)
+library(ggplot2)
+```
+
+```{python}
+# Importa a biblioteca plotly.express com o alias px
+
+# pip install plotly.express
+
+import plotly.express as px
+
+# Carrega o conjunto de dados gapminder do plotly.express e armazena na variável df
+df = px.data.gapminder()
+```
+
+
+# page 1
+
+
+```{python}
+#| title: PIB e Expectativa de Vida com python
+px.scatter(  
+    df, x="gdpPercap", y="lifeExp", 
+    animation_frame="year", animation_group="country", 
+    size="pop", color="continent", hover_name="country",
+    facet_col="continent", log_x=True, size_max=45, 
+    range_x=[100,100000], range_y=[25,90],
+    labels={
+        "gdpPercap": "PIB per Capita",
+        "lifeExp": "Expectativa de Vida",
+        "year": "Ano",
+        "country": "País",
+        "pop": "População",
+        "continent": "Continente"
+    }
+)  
+```
+
+```{r}
+#| title: PIB e Expectativa de Vida com R
+# Cria o gráfico de dispersão com ggplot2
+
+p <- ggplot(gapminder, aes(x = gdpPercap, y = lifeExp,
+            color = continent, size = pop)) +
+  geom_point() +
+  scale_x_log10() +
+  labs(
+    x = "PIB per Capita",
+    y = "Expectativa de Vida",
+    color = "Continente",
+    size = "População"
+  ) +
+  # Adiciona a animação
+  transition_time(year) +
+  labs(title = "Ano: {frame_time}")
+
+# Exibe o gráfico
+animate(p, renderer = gifski_renderer())
+```
+
+
+
+# page 2
+
+
+```{python}
+#| title: População
+
+px.area(
+    df, x="year", y="pop", 
+    color="continent", line_group="country",
+    labels={
+        "year": "Ano",
+        "pop": "População",
+        "continent": "Continente",
+        "country": "País"
+    }
+)
+```
+
+```{python}
+#| title: Expectativa de Vida
+px.line(
+    df, x="year", y="lifeExp", 
+    color="continent", line_group="country",
+    labels={
+        "year": "Ano",
+        "lifeExp": "Expectativa de Vida",
+        "continent": "Continente",
+        "country": "País"
+    }
+)
+```
